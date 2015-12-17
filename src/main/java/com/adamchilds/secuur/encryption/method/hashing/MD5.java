@@ -26,7 +26,7 @@ public class MD5 {
 
         MessageDigest messageDigest;
         try {
-           messageDigest = MessageDigest.getInstance("MD5");
+            messageDigest = MessageDigest.getInstance("MD5");
         } catch (NoSuchAlgorithmException nsae) {
             return new byte[0];
         }
