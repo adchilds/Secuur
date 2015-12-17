@@ -12,7 +12,7 @@ import java.security.SecureRandom;
 /**
  *
  */
-public class AutokeyCipherUtils {
+public class AutokeyCipher {
 
     public static final char[][] TABULA_RECTA = new char[][] {
             { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' },

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Modified version of the Baconian Cipher. Replaced j and v with unique values.
  */
-public class BaconianCipherUtils {
+public class BaconianCipher {
 
     public static final BiMap<Character, String> ENCODING_MAP =
             new ImmutableBiMap.Builder<Character, String>()
@@ -101,6 +101,6 @@ public class BaconianCipherUtils {
         return stringBuilder.toString();
     }
 
-    private BaconianCipherUtils() {}
+    private BaconianCipher() {}
 
 }

@@ -1,14 +1,14 @@
 package com.adamchilds.secuur;
 
 import com.adamchilds.secuur.encryption.EncryptionOptions;
-import com.adamchilds.secuur.encryption.method.binary.Base32Utils;
-import com.adamchilds.secuur.encryption.method.binary.Base64Utils;
-import com.adamchilds.secuur.encryption.method.cipher.AutokeyCipherUtils;
-import com.adamchilds.secuur.encryption.method.cipher.BaconianCipherUtils;
-import com.adamchilds.secuur.encryption.method.cipher.CaesarCipherUtils;
-import com.adamchilds.secuur.encryption.method.cipher.SubstitutionCipherUtils;
-import com.adamchilds.secuur.encryption.method.hashing.MD2Utils;
-import com.adamchilds.secuur.encryption.method.hashing.MD5Utils;
+import com.adamchilds.secuur.encryption.method.binary.Base32;
+import com.adamchilds.secuur.encryption.method.binary.Base64;
+import com.adamchilds.secuur.encryption.method.cipher.AutokeyCipher;
+import com.adamchilds.secuur.encryption.method.cipher.BaconianCipher;
+import com.adamchilds.secuur.encryption.method.cipher.CaesarCipher;
+import com.adamchilds.secuur.encryption.method.cipher.SubstitutionCipher;
+import com.adamchilds.secuur.encryption.method.hashing.MD2;
+import com.adamchilds.secuur.encryption.method.hashing.MD5;
 import com.adamchilds.secuur.exception.CannotEncryptException;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
@@ -44,28 +44,28 @@ public class Secuur {
                 break;
 
             case BINARY_BASE32:
-                return Base32Utils.encode(bytesToEncrypt);
+                return Base32.encode(bytesToEncrypt);
 
             case BINARY_BASE64:
-                return Base64Utils.encode(bytesToEncrypt);
+                return Base64.encode(bytesToEncrypt);
 
             case CIPHER_AUTOKEY:
-                return AutokeyCipherUtils.encipher(bytesToEncrypt);
+                return AutokeyCipher.encipher(bytesToEncrypt);
 
             case CIPHER_BACONIAN:
-                return BaconianCipherUtils.encipher(bytesToEncrypt);
+                return BaconianCipher.encipher(bytesToEncrypt);
 
             case CIPHER_CAESAR:
-                return CaesarCipherUtils.encipher(bytesToEncrypt);
+                return CaesarCipher.encipher(bytesToEncrypt);
 
             case CIPHER_SUBSTITUTION:
-                return SubstitutionCipherUtils.encipher(bytesToEncrypt);
+                return SubstitutionCipher.encipher(bytesToEncrypt);
 
             case HASH_MD2:
-                return MD2Utils.encrypt(bytesToEncrypt);
+                return MD2.encrypt(bytesToEncrypt);
 
             case HASH_MD5:
-                return MD5Utils.encrypt(bytesToEncrypt);
+                return MD5.encrypt(bytesToEncrypt);
 
             case HASH_SHA:
                 break;

@@ -5,9 +5,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Tests for the {@link AutokeyCipherUtils} class.
+ * Tests for the {@link AutokeyCipher} class.
  */
-public class AutokeyCipherUtilsTest {
+public class AutokeyCipherTest {
 
     @Test
     public void testEncipher() {
@@ -42,7 +42,7 @@ public class AutokeyCipherUtilsTest {
 
     @Test
     public void testGenerateRandomTabulaRecta() {
-        assertNotNull(AutokeyCipherUtils.generateRandomTabulaRecta());
+        assertNotNull(AutokeyCipher.generateRandomTabulaRecta());
     }
 
 }

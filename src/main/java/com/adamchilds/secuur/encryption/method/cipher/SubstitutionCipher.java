@@ -19,8 +19,8 @@ import java.util.List;
  * enciphered = This is K mKd exKmple (just kidding).
  * deciphered = This is a bad exabple (just kidding).
  */
-public class SubstitutionCipherUtils {
-    private static final Logger logger = LoggerFactory.getLogger(SubstitutionCipherUtils.class);
+public class SubstitutionCipher {
+    private static final Logger logger = LoggerFactory.getLogger(SubstitutionCipher.class);
 
     public static final List<Character> VALID_CHARACTERS = Lists.newArrayList(
             // ASCII
@@ -174,6 +174,6 @@ public class SubstitutionCipherUtils {
         return substitutionChars;
     }
 
-    private SubstitutionCipherUtils() {}
+    private SubstitutionCipher() {}
 
 }

@@ -3,8 +3,8 @@ package com.adamchilds.secuur.encryption.method.hashing;
 /**
  *
  */
-public class SHAUtils {
+public class SHA {
 
-    private SHAUtils() {}
+    private SHA() {}
 
 }

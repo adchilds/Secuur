@@ -3,8 +3,8 @@ package com.adamchilds.secuur.encryption.method.symmetric;
 /**
  *
  */
-public class IDEAUtils {
+public class IDEA {
 
-    private IDEAUtils() {}
+    private IDEA() {}
 
 }

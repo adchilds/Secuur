@@ -3,8 +3,8 @@ package com.adamchilds.secuur.encryption.method.asymmetric;
 /**
  *
  */
-public class RSAUtils {
+public class RSA {
 
-    private RSAUtils() {}
+    private RSA() {}
 
 }

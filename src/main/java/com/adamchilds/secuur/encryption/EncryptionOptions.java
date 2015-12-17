@@ -1,9 +1,9 @@
 package com.adamchilds.secuur.encryption;
 
 import com.adamchilds.secuur.encryption.method.EncryptionType;
-import com.adamchilds.secuur.encryption.method.cipher.AutokeyCipherUtils;
-import com.adamchilds.secuur.encryption.method.cipher.CaesarCipherUtils;
-import com.adamchilds.secuur.encryption.method.cipher.SubstitutionCipherUtils;
+import com.adamchilds.secuur.encryption.method.cipher.AutokeyCipher;
+import com.adamchilds.secuur.encryption.method.cipher.CaesarCipher;
+import com.adamchilds.secuur.encryption.method.cipher.SubstitutionCipher;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -43,10 +43,10 @@ public class EncryptionOptions {
         encryptionOptions.setPrivateKey("7h!$_i5_4-Pr1v4TE_k3y");
         encryptionOptions.setPublicKey("public_key");
         encryptionOptions.setSalt("7hi$_1s-4_5al7");
-        encryptionOptions.setAutoKey(AutokeyCipherUtils.AUTOKEY);
-        encryptionOptions.setSubstitutionChars(SubstitutionCipherUtils.generateRandomSubstitutions());
-        encryptionOptions.setShift(CaesarCipherUtils.generateRandomShift());
-        encryptionOptions.setTabulaRecta(AutokeyCipherUtils.generateRandomTabulaRecta());
+        encryptionOptions.setAutoKey(AutokeyCipher.AUTOKEY);
+        encryptionOptions.setSubstitutionChars(SubstitutionCipher.generateRandomSubstitutions());
+        encryptionOptions.setShift(CaesarCipher.generateRandomShift());
+        encryptionOptions.setTabulaRecta(AutokeyCipher.generateRandomTabulaRecta());
 
         return encryptionOptions;
     }

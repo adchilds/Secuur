@@ -11,7 +11,7 @@ import java.util.Random;
 /**
  *
  */
-public class CaesarCipherUtils {
+public class CaesarCipher {
 
     public static final List<Character> VALID_CHARACTERS = Lists.newArrayList(
             // Lowercase
@@ -153,6 +153,6 @@ public class CaesarCipherUtils {
         return new Random().nextInt(VALID_CHARS_LENGTH) + 1;
     }
 
-    private CaesarCipherUtils() {}
+    private CaesarCipher() {}
 
 }

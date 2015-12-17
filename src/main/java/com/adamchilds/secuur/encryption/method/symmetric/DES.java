@@ -3,8 +3,8 @@ package com.adamchilds.secuur.encryption.method.symmetric;
 /**
  *
  */
-public class AESUtils {
+public class DES {
 
-    private AESUtils() {}
+    private DES() {}
 
 }

@@ -3,40 +3,41 @@ package com.adamchilds.secuur.encryption.method.binary;
 import com.adamchilds.secuur.exception.CannotDecodeException;
 import com.google.common.base.Charsets;
 import org.apache.commons.lang3.ArrayUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
 import java.io.IOException;
 
 /**
+ * Implementation of basic encoding and decoding via the Base64 binary algorithm.
  *
+ * @author Adam Childs
+ * @since 1.0
  */
-public class Base64Utils {
-    private static final Logger logger = LoggerFactory.getLogger(Base64Utils.class);
+public class Base64 {
 
     public static final BASE64Encoder ENCODER = new BASE64Encoder();
     public static final BASE64Decoder DECODER = new BASE64Decoder();
 
     /**
+     * Encodes the given array of bytes using the Base64 encoding algorithm.
      *
-     * @param bytesToEncode
-     * @return
+     * @param bytesToEncode the array of bytes to encode
+     * @return a new array of encoded bytes
      */
     public static byte[] encode(byte[] bytesToEncode) {
         if (ArrayUtils.isEmpty(bytesToEncode)) {
             return new byte[0];
         }
 
-        String encodedString = ENCODER.encode(bytesToEncode);
-        return encodedString.getBytes();
+        return ENCODER.encode(bytesToEncode).getBytes();
     }
 
     /**
+     * Encodes the given {@link String} using the Base64 encoding algorithm.
      *
-     * @param stringToEncode
-     * @return
+     * @param stringToEncode the String to encode
+     * @return a new encoded {@link String}
      */
     public static String encode(String stringToEncode) {
         if (stringToEncode == null) {
@@ -50,9 +51,10 @@ public class Base64Utils {
     }
 
     /**
+     * Decodes the given array of bytes using the Base64 decoding algorithm.
      *
-     * @param bytesToDecode
-     * @return
+     * @param bytesToDecode the array of bytes to encode
+     * @return a new array of decoded bytes
      */
     public static byte[] decode(byte[] bytesToDecode) {
         if (ArrayUtils.isEmpty(bytesToDecode)) {
@@ -64,9 +66,10 @@ public class Base64Utils {
     }
 
     /**
+     * Decodes the given {@link String} using the Base64 decoding algorithm.
      *
-     * @param stringToDecode
-     * @return
+     * @param stringToDecode the {@link String} to decode
+     * @return a new decoded {@link String}
      */
     public static String decode(String stringToDecode) {
         if (stringToDecode == null) {
@@ -83,6 +86,6 @@ public class Base64Utils {
         return new String(decodedBytes, Charsets.UTF_8);
     }
 
-    private Base64Utils() {}
+    private Base64() {}
 
 }
